@@ -32,6 +32,51 @@ header h1 {
     margin-bottom: 10px;
 }
 
+.purpose-section {
+    background-color: #f0f4f8;
+    padding: 20px;
+    border-top: 1px solid #e1e8ed;
+    margin-top: 20px;
+}
+
+.purpose-section h2 {
+    color: #4a6fa5;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.purpose-content {
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.purpose-content p {
+    margin-bottom: 15px;
+}
+
+.purpose-content ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.purpose-content li {
+    margin-bottom: 8px;
+}
+
+.purpose-content a {
+    color: #4a6fa5;
+    text-decoration: none;
+    border-bottom: 1px dotted #4a6fa5;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+.purpose-content a:hover {
+    color: #385d8a;
+    border-bottom: 1px solid #385d8a;
+}
+
 main {
     padding: 20px;
 }
@@ -91,6 +136,18 @@ button:hover {
 @media (max-width: 768px) {
     .results-section {
         grid-template-columns: 1fr;
+    }
+    
+    .purpose-section {
+        padding: 15px;
+    }
+    
+    .purpose-content {
+        font-size: 0.95rem;
+    }
+    
+    .purpose-section h2 {
+        font-size: 1.2rem;
     }
 }
 
