@@ -137,15 +137,15 @@ button:hover {
     .results-section {
         grid-template-columns: 1fr;
     }
-    
+
     .purpose-section {
         padding: 15px;
     }
-    
+
     .purpose-content {
         font-size: 0.95rem;
     }
-    
+
     .purpose-section h2 {
         font-size: 1.2rem;
     }
@@ -164,21 +164,29 @@ button:hover {
     word-break: break-word;
 }
 
-#stats-display {
+#stats-display, #output-stats-display {
     margin-bottom: 10px;
     font-weight: 500;
 }
 
-#stats-count, #replaced-count, #removed-count {
+#highlighted-text, #output-text {
+    min-height: 200px;
+}
+
+#output-text {
+    flex: 1;
+}
+
+#stats-count, #replaced-count, #removed-count, #replaced-stats, #removed-stats {
     font-weight: bold;
     color: #4a6fa5;
 }
 
-#replaced-count {
+#replaced-count, #replaced-stats {
     color: #2e8b57; /* SeaGreen */
 }
 
-#removed-count {
+#removed-count, #removed-stats {
     color: #dc3545; /* Bootstrap danger red */
 }
 
@@ -212,4 +220,4 @@ footer {
     color: #777;
     margin-top: 5px;
     font-style: italic;
-} 
+}

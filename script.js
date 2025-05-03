@@ -152,11 +152,13 @@ Try copying this text to see how the special characters are replaced!`;
         outputText.value = cleanedText;
         statsCount.textContent = count;
         
-        // Update status display text
+        // Update the character analysis status display - simplified
         document.getElementById('stats-display').innerHTML = 
-            `<span id="stats-count">${count}</span> invisible/special characters detected 
-             (<span id="replaced-count">${replacedCount}</span> replaced, 
-              <span id="removed-count">${count - replacedCount}</span> removed)`;
+            `<span id="stats-count">${count}</span> invisible/special characters detected`;
+              
+        // Update the processed text status display - with detailed counts
+        document.getElementById('replaced-stats').textContent = replacedCount;
+        document.getElementById('removed-stats').textContent = count - replacedCount;
     }
 
     // Escape HTML characters to prevent XSS
@@ -175,6 +177,12 @@ Try copying this text to see how the special characters are replaced!`;
         outputText.value = '';
         highlightedText.innerHTML = '';
         statsCount.textContent = '0';
+        
+        // Reset the status displays to match their simplified/detailed formats
+        document.getElementById('stats-display').innerHTML = 
+            '<span id="stats-count">0</span> invisible/special characters detected';
+        document.getElementById('replaced-stats').textContent = '0';
+        document.getElementById('removed-stats').textContent = '0';
     }
 
     // Function to copy the cleaned text to clipboard
