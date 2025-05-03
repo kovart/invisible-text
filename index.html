@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unicode Character Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Unicode Character Analyzer</h1>
+            <p>Detect, replace, and clean invisible or unusual Unicode characters from your text</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <h2>Input Text</h2>
+                <textarea id="input-text" placeholder="Paste or type your text here..."></textarea>
+                <div class="button-group">
+                    <button id="analyze-btn">Analyze Text</button>
+                    <button id="clear-btn">Clear All</button>
+                </div>
+            </div>
+
+            <div class="results-section">
+                <div class="highlight-section">
+                    <h2>Character Analysis</h2>
+                    <div id="stats-display">
+                        <span id="stats-count">0</span> invisible/special characters detected
+                    </div>
+                    <div id="highlighted-text" class="text-display"></div>
+                </div>
+
+                <div class="output-section">
+                    <h2>Processed Text</h2>
+                    <textarea id="output-text" readonly placeholder="Text with replacements will appear here..."></textarea>
+                    <button id="copy-btn">Copy to Clipboard</button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Unicode Character Analyzer - Detects non-breaking spaces, zero-width characters, and other invisible Unicode</p>
+            <p class="disclaimer">Privacy notice: All text processing happens in your browser. No data is sent to any server.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
